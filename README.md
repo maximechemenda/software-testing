@@ -25,8 +25,8 @@ Once `MongoDB` is initiated, you can start your server by running `node server.j
 # File Structure
 
 ```bash
-├── .env | The configuration file
-├── .env.ci | The configuration file used on CI.
+├── .env.local | The local configuration file
+├── .env | The configuration file used on CI.
 ├── db-cleanup.js | A script for DB cleanup
 ├── docker-compose.yml | Docker services composition file, used on CI.
 ├── Dockerfile | Main application Docker file, used on CI.
@@ -70,8 +70,11 @@ sudo systemctl status mongod
 
 You can start it by doing `sudo systemctl start mongod`, or stop it by doing `sudo systemctl stop mongod`.
 
-To setup the server, run `node server.js`. The project will start.
-You can setup options such as port in the .env configuration file.
+To setup the server locally, run `node server.js`. The project will start.
+You can then setup options such as port in the respective configuration file.
+
+Keep in mind that you will need to use the *local* configuration, therefore it is recommended
+thet you rename `.env` file to `.env.ci` the `.env.local` file to `.env`, or configure your system so that it utilizes `.env.local` before you start the server locally.
 
 To execute Unit/Integration tests, run `npm test`.
 Tests will then be executed and results will be displayed on console.

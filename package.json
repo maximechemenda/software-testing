@@ -11,7 +11,6 @@
     "test-api-simple": "DOTENV_CONFIG_PATH=.env jest --setupFiles dotenv/config -- __tests__/api/api.users-simple.test.js",
     "test-api-generic": "DOTENV_CONFIG_PATH=.env jest --setupFiles dotenv/config -- __tests__/api/api.users-generic.test.js",
     "test": "DOTENV_CONFIG_PATH=.env jest --setupFiles dotenv/config",
-    "test-ci": "DOTENV_CONFIG_PATH=.env.ci jest --setupFiles dotenv/config",
     "performance": "artillery run __tests__/performance/performance-test.yml --output performance.json && node db-cleanup.js",
     "report": "artillery report --output performance.html performance.json"
   },
