@@ -107,4 +107,3 @@ In order to setup the application for Continuous Integration tests execution (wh
 7. Setup a local docker network on your device, with the name "mynetwork". You can do so by running `docker network create mynetwork`. This is crucial, as otherwise your docker components will not be able to communicate each other.
 8. Important note: make sure that your local `mongodb` instance or any other local service does not run on the same port with the one the docker containers are setup to run, as you will end up having conflicts. By default, we have setup the port `3000` for our API app, and `27017` for our `mongodb` instance.
 9. You are all set! Commit to your repo and you should see the runner running your CI pipeline and the tests passing, upon successful installation.
-

@@ -28,6 +28,6 @@ const authenticateToken = (req, res, next) => {
   });
 }
 
-  module.exports = {
-    authenticateToken: authenticateToken
-  };
+module.exports = {
+  authenticateToken: authenticateToken
+};
