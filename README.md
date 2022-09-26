@@ -74,7 +74,7 @@ To setup the server locally, run `node server.js`. The project will start.
 You can then setup options such as port in the respective configuration file.
 
 Keep in mind that you will need to use the *local* configuration, therefore it is recommended
-thet you rename `.env` file to `.env.ci` the `.env.local` file to `.env`, or configure your system so that it utilizes `.env.local` before you start the server locally.
+thet you rename `.env.local` file to `.env` (discarding or renaming the existing `.env` file which relates to CI), configure your system so that it utilizes `.env.local` before you start the server locally or ignore local changes on `.env`file and rename the `.env.local`.
 
 To execute Unit/Integration tests, run `npm test`.
 Tests will then be executed and results will be displayed on console.
@@ -107,3 +107,4 @@ In order to setup the application for Continuous Integration tests execution (wh
 7. Setup a local docker network on your device, with the name "mynetwork". You can do so by running `docker network create mynetwork`. This is crucial, as otherwise your docker components will not be able to communicate each other.
 8. Important note: make sure that your local `mongodb` instance or any other local service does not run on the same port with the one the docker containers are setup to run, as you will end up having conflicts. By default, we have setup the port `3000` for our API app, and `27017` for our `mongodb` instance.
 9. You are all set! Commit to your repo and you should see the runner running your CI pipeline and the tests passing, upon successful installation.
+
