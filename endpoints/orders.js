@@ -36,6 +36,7 @@ module.exports = (app) => {
   app.get("/orders", authenticateToken, async (req, res) => {
     try{
       let allOrders = await Order.find({ user : req.user.id });
+      console.log("Success: Orders for given user are retrieved")
       return res.status(200).json(allOrders);
     } catch(error) {
       console.log(error);

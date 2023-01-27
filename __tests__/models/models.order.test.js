@@ -20,8 +20,6 @@ describe("Order Model Tests.", () => {
     );
   });
 
-  /////// START OF MY IMPLEMENTATION /////
-
   beforeEach(async () => {
     // Remove all existing Order documents before each test
     await Order.deleteMany({});

@@ -11,6 +11,7 @@ const authenticateToken = (req, res, next) => {
   const token = authHeader && authHeader.split(' ')[1];
   
   if (token == null){
+    console.log("Error: Token is null")
     return res.sendStatus(401);
   }
   jwt.verify(token, process.env.API_SECRET, (error, user) => {
@@ -20,6 +21,7 @@ const authenticateToken = (req, res, next) => {
     }
 
     User.findOne({_id: user.id}).then(userFound => {
+    console.log("Success: User associated with token found")
       user.role = userFound.role;
       req.user = user;
       next();
