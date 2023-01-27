@@ -14,7 +14,6 @@ const authenticateToken = (req, res, next) => {
     return res.sendStatus(401);
   }
   jwt.verify(token, process.env.API_SECRET, (error, user) => {
-    
     if (error) {
       console.log(error)
       return res.status(403).send({"message": "Unauthorized access."});

@@ -36,4 +36,21 @@ module.exports = async () => {
     "password": "12345",
     "address": "Somewhere 10"
   });
+
+  await axios.post(prepare("/users/register"), {
+    "name": "User2",
+    "role": "User",
+    "email": "testuser2@test.com",
+    "password": "12345",
+    "address": "Somewhere 20"
+  });
+
+  await axios.post(prepare("/users/register"), {
+    "name": "UserWith2Boxes",
+    "role": "User",
+    "email": "testuserwith2boxes@test.com",
+    "password": "12345",
+    "address": "Somewhere 20"
+  });
+
 };

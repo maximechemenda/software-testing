@@ -145,24 +145,26 @@ module.exports = (app) => {
     }
   });
 
+//   THIS IS DUPLICATE CODE. THE CODE FOR THIS IS ALREADY WRITTEN AT THE TOP OF THE PAGE
   /* Get orders of any user. */
-  app.get("/orders/user/:userID", authenticateToken, async (req, res) => {
-    try {
+//   app.get("/orders/user/:userID", authenticateToken, async (req, res) => {
+//     try {
 
-      // This is an admin-only operation.
-      if(req.user.role !== "Admin") {
-        return res.status(403).json({
-          "message": "Unauthorized Access."
-        });
-      }
-      const {userID} = req.params;
-      const allOrders = await Order.find({user: userID});
-      return res.status(200).json(allOrders);
-    } catch(error) {
-      console.log(error);
-      return res.status(400).json({
-        "message": "Bad Request."
-      });
-    }
-  });
+//       // This is an admin-only operation.
+//       if(req.user.role !== "Admin") {
+//         return res.status(403).json({
+//           "message": "Unauthorized Access."
+//         });
+//       }
+//       const {userID} = req.params;
+//       const allOrders = await Order.find({user: userID});
+//       return res.status(200).json(allOrders);
+//     } catch(error) {
+//       console.log(error);
+//       return res.status(400).json({
+//         "message": "Bad Request."
+//       });
+//     }
+//   });
 }
+
