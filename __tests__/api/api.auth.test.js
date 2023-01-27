@@ -21,17 +21,6 @@ describe("Unit tests for User Auth module", () => {
         process.env.DB_ENDPOINT
       );
 
-    // Login all related users.
-    // const login = await axios.post(prepare("/users/login/"), {
-    //   email: "testuserwith2boxes@test.com",
-    //   password: "12345"
-    // });
-
-    // const {accessToken} = login.data;
-
-    // config = {
-    //     headers: { authorization: `Bearer ${accessToken}` }
-    // };
   });
 
     it("returns 401 when token is null or undefined", () => {

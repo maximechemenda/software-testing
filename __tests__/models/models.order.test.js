@@ -117,21 +117,6 @@ describe("Order Model Tests.", () => {
         expect(savedOrder._id).toBeDefined();
     });
 
-
-    // it("should correctly reference the User model", async () => {
-    //     const newUser = new User(testUser);
-    //     await newUser.save();
-
-    //     const newOrder = new Order({
-    //         type: "Box1",
-    //         user: newUser._id
-    //     });
-    //     const savedOrder = await newOrder.save();
-
-    //     expect(savedOrder.user.toString()).toBe(newUser._id.toString());
-    //     await User.deleteOne({_id: newUser._id});
-    // });
-
     it("should return the correct value for the type field if set correclty", async () => {
         const order = new Order({ type: "Box2" });
         await order.save();
@@ -184,11 +169,6 @@ describe("Order Model Tests.", () => {
         const order = await Order.findOneAndDelete({ _id: unexistingOrderId });
         expect(order).toBeNull();
     });
-
-    
-
-
-
 
 
   afterAll(async () => {
