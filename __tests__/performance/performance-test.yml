@@ -6,8 +6,8 @@
 config:
   target: "http://localhost:3000"
   phases:
-    - duration: 10
-      arrivalRate: 1
+    - duration: 50
+      arrivalRate: 10
   processor: "./performance-helper.js"
   plugins:
     metrics-by-endpoint:
